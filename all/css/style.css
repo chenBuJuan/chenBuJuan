@@ -1,0 +1,413 @@
+
+p,h1,h2{
+	margin: 0;
+}
+
+header{
+	height: 40px;
+	width: 100%;
+	background: #ccc;
+	position: fixed;
+	z-index: 102;
+	top: 0;
+}
+
+header .nav{
+	width: 100%;
+	height: 100%;
+	background: #000;
+	margin: 0 auto;
+}
+
+header .nav ul{
+	width: 100%;
+	height: 100%;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+header .nav ul li{
+	display: inline-block;
+	position: relative;
+	width: 20%;
+	height: 100%;
+	line-height: 40px;
+	text-align: center;
+	margin: 0;
+	letter-spacing: 3px;
+	font-size: 14px;
+	text-shadow: 1px 1px 1px #000;
+	
+	transition: background-color 0.5s ease-in-out;
+	-webkit-transition: background-color 0.5s ease-in-out;
+	-o-transition: background-color 0.5s ease-in-out;
+	-moz-transition: background-color 0.5s ease-in-out;
+}
+
+header .nav ul li:hover{
+	background: #022;
+}
+
+header .nav ul li:hover .li{
+	display: block;
+}
+
+header .nav ul li a{
+	text-decoration: none;
+	color: #fff;
+}
+
+header .nav ul li .li{
+	position: absolute;
+	top: 100%;
+	line-height: 40px;
+	width: 100%;
+	background: black;
+	display: none;
+}
+
+header .nav ul li .li span{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	
+	transition: background-color 0.5s ease-in-out;
+	-webkit-transition: background-color 0.5s ease-in-out;
+	-o-transition: background-color 0.5s ease-in-out;
+	-moz-transition: background-color 0.5s ease-in-out;
+}
+
+header .nav ul li .li span:hover{
+	background: #022;
+}
+
+section{
+	width: 100%;
+	margin-top: 40px;
+}
+
+section .head{
+	height: 650px;
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+
+section .head img{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 650px;
+	z-index: 0;
+}
+
+section .head .left,section .head .right{
+	height: 200px;
+	width: 10%;
+	position: absolute;
+	z-index: 101;
+	background: black;
+	color: #fff;
+	font-size: 50px;
+	text-align: center;
+	line-height: 200px;
+	opacity: 0;
+	cursor: pointer;
+	
+	transition: opacity 0.5s ease-in-out;
+	-webkit-transition: opacity 0.5s ease-in-out;
+	-o-transition: opacity 0.5s ease-in-out;
+	-moz-transition: opacity 0.5s ease-in-out;
+}
+
+section .head .left:hover,section .head .right:hover{
+	opacity: 0.7;
+}
+
+section .head .left{
+	top: 200px;
+	left: 0;
+}
+
+section .head .right{
+	top: 200px;
+	left: 90%;
+}
+
+section .head .toleft,section .head .toright{
+	height: 650px;
+	width: 50%;
+	position: absolute;
+	z-index: 100;
+	cursor: pointer;
+}
+
+section .head .toleft{
+	top: 0;
+	left: 0;
+}
+
+section .head .toright{
+	top: 0;
+	left: 50%;
+}
+
+section .head .toleft:hover ~ .left{
+	opacity: 0.5;
+}
+
+section .head .toright:hover ~ .right{
+	opacity: 0.5;
+}
+
+section .content{
+	width: 100%;
+	background: #ccc;
+}
+
+section .content .top{
+	width: 100%;
+	height: 300px;
+	text-align: center;
+	background: #fff;
+}
+
+section .content .top .cell{
+	display: inline-block;
+	width: 350px;
+	padding-top: 20px;
+	background: #fff;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	position: relative;
+	top: 50px;
+}
+
+section .content .top .cell a{
+	display: inline-block;
+	font-size: 18px;
+	text-decoration: none;
+	color: #fff;
+	letter-spacing: 1px;
+	background: #1e00ff;
+	height: 150px;
+	overflow: hidden;
+}
+
+section .content .top .cell img{
+	width: 300px;
+	height: 150px;
+	opacity: 1;
+	
+	transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+}
+
+section .content .top .cell:hover img{
+	opacity: 0.2;
+}
+
+section .content .top .cell p{
+	
+	position: absolute;
+	top: 50px;
+	left: 25px;
+	display: block;
+	width: 300px;
+	height: 150px;
+	opacity: 0;
+	transform: rotate(360deg) translate(0,-75px);
+	-webkit-transform: rotate(360deg) translate(0,-75px);
+	-moz-transform: rotate(360deg) translate(0,-75px);
+	-ms-transform: rotate(360deg) translate(0,-75px);
+	-o-transform: rotate(360deg) translate(0,-75px);	
+	
+	transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+}
+
+section .content .top .cell:hover p{
+	opacity: 1;
+	transform: rotate(0deg) translate(0,0);
+	-webkit-transform: rotate(0deg) translate(0,0);
+	-moz-transform: rotate(0deg) translate(0,0);
+	-ms-transform: rotate(0deg) translate(0,0);
+	-o-transform: rotate(0deg) translate(0,0);	
+}
+
+section .content .mes{
+	width: 100%;
+	height: 150px;
+	background: #fff;
+	display: inline-block;
+	line-height: 250px;
+	text-align: center;
+}
+
+section .content .mes img{
+	display: inline-block;
+	height: 80px;
+}
+
+section .content .container{
+	width: 80%;
+	height: 650px;
+	margin: 0 auto;
+	border-top: 5px solid #ccc;
+	padding-top: 50px;
+}
+
+section .content .container .cell{
+	height: 200px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	display: inline-block;
+	float: left;
+	padding: 10px;
+	overflow: hidden;
+	position: relative;
+}
+
+section .content .container .cell{
+	transform: translate(0,0px);
+	-webkit-transform: translate(0,0px);
+	-moz-transform: translate(0,0px);
+	-ms-transform: translate(0,0px);
+	-o-transform: translate(0,0px);
+	
+	transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+}
+
+section .content .container .cell:hover{
+	transform: translate(0,-5px);
+	-webkit-transform: translate(0,-5px);
+	-moz-transform: translate(0,-5px);
+	-ms-transform: translate(0,-5px);
+	-o-transform: translate(0,-5px);
+}
+
+section .content .container .cell img{
+	height: 180px;
+	width: 100%;
+}
+
+section .content .container .cell div,section .content .container .cell p{
+	height: 180px;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	right: 10px;
+	bottom: 10px;
+	background: #ff00ae;
+	opacity: 0;
+	
+	transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+}
+
+section .content .container .cell:hover a>div{
+	opacity: 0.8;
+}
+
+section .content .container .cell:hover a>p{
+	opacity: 1;
+}
+
+section .content .container .cell p{
+	color: #fff;
+	line-height: 180px;
+	text-align: center;
+	font-size: 100px;
+	background: none;
+	
+	transition-delay: 0.5s;
+	-webkit-transition-delay: 0.5s;
+	-moz-transition-delay: 0.5s;
+	-ms-transition-delay: 0.5s;
+	-o-transition-delay: 0.5s;
+	
+	transform: translate(-5px,0px);
+	-webkit-transform: translate(-5px,0);
+	-moz-transform: translate(-5px,0);
+	-ms-transform: translate(-5px,0);
+	-o-transform: translate(-5px,0);
+}
+
+section .content .container .cell:hover a>p{
+	transform: translate(0,0px);
+	-webkit-transform: translate(0,0px);
+	-moz-transform: translate(0,0px);
+	-ms-transform: translate(0,0px);
+	-o-transform: translate(0,0px);
+}
+
+section .content .container .cell p span{
+	transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+}
+
+section .content .container .cell p span:hover{
+	color: #000;
+}
+
+section .content .container .cell_1,
+section .content .container .cell_2{
+	width: 50%;
+}
+
+section .content .container .cell_3{
+	width: 75%;
+}
+
+section .content .container .cell_4{
+	width: 25%;
+}
+
+section .content .container .cell_5,
+section .content .container .cell_6,
+section .content .container .cell_7,
+section .content .container .cell_8{
+	width: 25%;
+}
+
+footer{
+	width: 100%;
+	height: 200px;
+	background: #022;
+	clear: both;
+	margin-top: 50px;
+	color: #fff;
+	font-size: 14px;
+}
+
+footer .mes
+{
+	width: 500px;
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+	top:50px;
+}
+
+footer .mes p
+{
+	columns: 2;
+	-webkit-columns: 2;
+}
